@@ -20,7 +20,11 @@ export class SozcuHaber {
     }
   }
 
+  async getBaseUrl(): Promise<string> {
+    return this.baseUrl;
+  }
+
   async sonDakika(): Promise<any[]> {
-    return await sonDakika();
+    return await sonDakika(this.baseUrl);
   }
 }

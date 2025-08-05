@@ -1,9 +1,9 @@
 import cheerio from "cheerio";
 import axios from "axios";
 
-export async function sonDakika(): Promise<any[]> {
+export async function sonDakika(baseUrl:string): Promise<any[]> {
   try {
-    const response = await axios.get("https://www.sozcu.com.tr/son-dakika/", {
+    const response = await axios.get(`${baseUrl}/son-dakika/`, {
       timeout: 15000,
       headers: {
         "User-Agent":
